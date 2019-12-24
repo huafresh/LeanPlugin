@@ -10,4 +10,5 @@ public interface IPluginApk {
 
     Class<?> loadClass(String className) throws ClassNotFoundException;
 
+    PluginPackageManager getPluginPackageManager();
 }

@@ -18,7 +18,7 @@ import java.util.List;
  * @date 2019-12-24 17:55
  */
 
-class PluginPackageInfo {
+class PluginPackageInfo implements PluginPackageManager{
     ApplicationInfo appInfo;
     final List<ActivityInfo> activities = new ArrayList<>(0);
     final List<ActivityInfo> receivers = new ArrayList<>(0);
@@ -38,5 +38,10 @@ class PluginPackageInfo {
 //        packageInfo.providers = (ApplicationInfo) packageWrap.getFieldValue("applicationInfo");
 
         return packageInfo;
+    }
+
+    @Override
+    public ApplicationInfo getApplicationInfo() {
+        return appInfo;
     }
 }
